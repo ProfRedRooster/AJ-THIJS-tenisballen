@@ -7,8 +7,12 @@
 
   <!--   Logo -->
   <div class="logo-box">
-      <img  width=65" height="65" src="2-2.png">
+      <img id="optionalstuff" width=65" height="65" src="2-2.png">
   </div>
+                                                                   <div class="logo-box">
+      <img id="notoptionalstuff" width=65" maxheight="65" src="2-3.png">
+  </div>
+                                                                 
   <!--   Logo -->
 
   <!--   navbar -->
@@ -29,7 +33,7 @@
 <main class="container">
   <section class="hero container">
     <h1 class="hero-title-primary">Meet Smiling Tennisbal</h1>
-    <p class="hero-title-sub">Een recyclings initiatief van Thijs Haverkamp en Allertjan Roodzand</p>
+    <p class="hero-title-sub">Een recyclings initiatief van Thijs Haverkamp en Allertjan Roodzant</p>
 
 
   </section>
@@ -389,11 +393,15 @@ figure svg {
   color: red;
   background-color: white;
 }
-@media (max-width:629px) {
+@media (max-width:590px) {
   img#optionalstuff {
     display: none;
   }
 }
+  @media (min-width:590px) {
+  img#notoptionalstuff {
+    display: none;
+  }
 .video-title {
   font-size: 35px;
   
