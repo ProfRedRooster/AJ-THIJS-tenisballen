@@ -8,10 +8,132 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #ee3e01;
-}
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #ee3e01;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: white;
+            box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        #header-img {
+            margin-left: 20px;
+            height: 80px;
+            float: left;
+        }
+
+        nav ul {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            clear: both;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: block;
+            font-size: 1.15em; /* Added 'em' unit for font size */
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            padding: 25px;
+            float: right;
+            display: block;
+        }
+
+        .nav-icon {
+            background: #333;
+            display: block;
+            height: 3px;
+            width: 30px;
+            position: relative;
+            transition: background 0.2s ease-out;
+        }
+
+        .nav-icon:before,
+        .nav-icon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all 0.2s ease-out;
+            width: 100%;
+        }
+
+        .nav-icon:before {
+            top: 6px;
+        }
+
+        .nav-icon:after {
+            top: -6px;
+        }
+
+        #menu-btn {
+            display: none;
+        }
+
+        #menu-btn:checked~nav ul {
+            max-height: 240px;
+        }
+
+        #menu-btn:checked~.menu-icon .nav-icon {
+            background: transparent;
+        }
+
+        #menu-btn:checked~.menu-icon .nav-icon:before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        #menu-btn:checked~.menu-icon .nav-icon:after {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        main {
+            display: flex;
+            flex-flow: column-reverse;
+            color: white;
+            width: 100%;
+            margin-top: 100px; /* Added margin-top for spacing */
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .hero-title-primary {
+            font-weight: 700;
+            font-size: 5em;
+            line-height: 58px;
+        }
+
+        .hero-title-sub {
+            margin: 0.2em 0 1em 0;
+            font-weight: 300;
+            font-size: 2em;
+        }
+
 
 .container {
   max-width: 100vw;
